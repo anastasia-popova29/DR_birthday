@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>С днём рождения, Дмитрий Ришатович!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;height:100%;background:#0A1224;font-family:Manrope,system-ui,sans-serif}
+body{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;overflow:hidden}
+.stage{position:relative;perspective:2400px}
+.card{position:absolute;left:0;top:0;width:1080px;height:1350px;transform-origin:0 0}
+.flip{position:relative;width:1080px;height:1350px;transform-style:preserve-3d;transition:transform .9s cubic-bezier(.3,.7,.2,1)}
+.flip.open{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:28px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.back{transform:rotateY(180deg)}
+button.hit{position:absolute;inset:0;width:100%;height:100%;background:none;border:0;padding:0;cursor:pointer}
+.hint{color:#B8C3D9;font-size:15px;letter-spacing:.06em;user-select:none}
+
+
+@keyframes carIn{0%{transform:translateX(-760px)}70%{transform:translateX(14px)}100%{transform:translateX(0)}}
+@keyframes rumble{0%,100%{transform:translateY(0)}50%{transform:translateY(-1.6px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes whoosh{0%{transform:translateX(90px);opacity:0}30%{opacity:1}100%{transform:translateX(-140px);opacity:0}}
+@keyframes road{to{stroke-dashoffset:92}}
+.car-in{animation:carIn 1.6s cubic-bezier(.2,.8,.2,1) both}
+.car-rumble{animation:rumble .14s linear infinite}
+.wheel{transform-box:fill-box;transform-origin:center;animation:spin .28s linear infinite}
+.speed line{animation:whoosh .7s linear infinite}
+.speed line:nth-child(2){animation-delay:.18s}
+.speed line:nth-child(3){animation-delay:.35s}
+.speed line:nth-child(4){animation-delay:.52s}
+.road{animation:road .35s linear infinite}
+@media (prefers-reduced-motion: reduce){.car-in,.car-rumble,.wheel,.speed line,.road{animation:none}}
+a{color:#F37021}a:hover{color:#ff3b30}
+
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+<div class="card" id="card">
+<div class="flip" id="flip">
+<div class="face front"><div style="width: 1080px; height: 1350px; box-sizing: border-box; background: #0F1B33; color: #F4F2EE; font-family: Manrope, system-ui, sans-serif; display: flex; flex-direction: column; position: relative; overflow: hidden">
+
+<div style="height: 14px; display: flex">
+<div style="flex-grow: 1; background: #F37021"></div>
+<div style="width: 220px; background: repeating-conic-gradient(#F4F2EE 0 25%, #0F1B33 0 50%) 0 0 / 14px 14px"></div>
+</div>
+
+<div style="padding: 96px 72px 0 72px; display: flex; flex-direction: column; gap: 20px">
+<div style="font-family: Unbounded, sans-serif; font-size: 34px; font-weight: 400; color: #F37021">С днём рождения,</div>
+<h1 style="margin: 0; font-family: Unbounded, sans-serif; font-size: 104px; line-height: 1.0; font-weight: 800; letter-spacing: -0.02em">Дмитрий<br>Ришатович!</h1>
+</div>
+
+<div style="padding: 48px 0 0 0">
+<svg viewBox="0 0 1080 380" width="1080" height="380" role="img" aria-label="Болид Формулы 1 на финишной прямой после горного трейла" style="display: block">
+<defs>
+<pattern id="chk1" width="16" height="16" patternUnits="userSpaceOnUse">
+<rect width="16" height="16" fill="#0F1B33"></rect>
+<rect width="8" height="8" fill="#F4F2EE"></rect>
+<rect x="8" y="8" width="8" height="8" fill="#F4F2EE"></rect>
+</pattern>
+</defs>
+<g stroke="#1F3055" stroke-width="1">
+<line x1="72" y1="60" x2="1008" y2="60"></line>
+<line x1="72" y1="140" x2="1008" y2="140"></line>
+<line x1="72" y1="220" x2="1008" y2="220"></line>
+</g>
+<path d="M72 320 L120 290 L168 220 L206 246 L258 120 L292 160 L340 54 L384 150 L420 124 L470 250 L520 320 Z" fill="#172645"></path>
+<path d="M72 320 L120 290 L168 220 L206 246 L258 120 L292 160 L340 54 L384 150 L420 124 L470 250 L520 320" fill="none" stroke="#5C7099" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"></path>
+<circle cx="340" cy="54" r="7" fill="#F37021"></circle>
+<line x1="72" y1="322" x2="1008" y2="322" stroke="#F4F2EE" stroke-width="3"></line>
+<line class="road" x1="72" y1="334" x2="1008" y2="334" stroke="#2A3D66" stroke-width="2" stroke-dasharray="28 18"></line>
+<rect x="984" y="250" width="24" height="72" fill="url(#chk1)"></rect>
+<g class="speed" stroke-linecap="round">
+<line x1="250" y1="236" x2="420" y2="236" stroke="#F37021" stroke-width="4" opacity="0.9"></line>
+<line x1="300" y1="262" x2="430" y2="262" stroke="#F4F2EE" stroke-width="3" opacity="0.5"></line>
+<line x1="200" y1="288" x2="410" y2="288" stroke="#F37021" stroke-width="3" opacity="0.6"></line>
+<line x1="330" y1="306" x2="425" y2="306" stroke="#F4F2EE" stroke-width="2" opacity="0.35"></line>
+</g>
+<ellipse cx="700" cy="322" rx="270" ry="8" fill="#000" opacity="0.6"></ellipse>
+<g transform="translate(440 192)">
+<g class="car-in">
+<g class="car-rumble">
+<rect x="-6" y="6" width="50" height="12" rx="3" fill="#0A1224"></rect>
+<rect x="-2" y="20" width="44" height="7" rx="3" fill="#F37021"></rect>
+<rect x="0" y="6" width="10" height="78" rx="2" fill="#22355C"></rect>
+<path d="M30 104 L30 76 Q70 66 128 56 L158 30 Q170 22 184 28 L204 56 L262 64 L340 72 L420 84 L486 98 L528 110 L528 116 L30 116 Z" fill="#F37021"></path>
+<path d="M126 112 L136 84 Q210 74 318 80 L352 112 Z" fill="#000" opacity="0.28"></path>
+<path d="M190 66 L470 96" stroke="#F4F2EE" stroke-width="5" fill="none"></path>
+<text x="214" y="104" font-family="Unbounded, sans-serif" font-size="22" font-weight="800" fill="#F4F2EE">ДР</text>
+<circle cx="236" cy="52" r="14" fill="#F4F2EE"></circle>
+<path d="M226 50 L250 50" stroke="#141416" stroke-width="5" stroke-linecap="round"></path>
+<path d="M200 54 Q232 26 284 62" stroke="#0A1224" stroke-width="6" fill="none" stroke-linecap="round"></path>
+<rect x="40" y="114" width="440" height="8" rx="2" fill="#0A1224"></rect>
+<rect x="444" y="118" width="88" height="8" rx="3" fill="#0A1224"></rect>
+<rect x="510" y="98" width="18" height="28" rx="3" fill="#22355C"></rect>
+<g class="wheel">
+<circle cx="96" cy="92" r="38" fill="#0A0A0B" stroke="#3A4E7A" stroke-width="3"></circle>
+<line x1="96" y1="72" x2="96" y2="112" stroke="#5C7099" stroke-width="3" transform="rotate(0 96 92)"></line><line x1="96" y1="72" x2="96" y2="112" stroke="#5C7099" stroke-width="3" transform="rotate(60 96 92)"></line><line x1="96" y1="72" x2="96" y2="112" stroke="#5C7099" stroke-width="3" transform="rotate(120 96 92)"></line>
+<circle cx="96" cy="92" r="20" fill="none" stroke="#F37021" stroke-width="3"></circle>
+<circle cx="96" cy="92" r="7" fill="#8A9AB8"></circle>
+</g>
+<g class="wheel">
+<circle cx="408" cy="96" r="34" fill="#0A0A0B" stroke="#3A4E7A" stroke-width="3"></circle>
+<line x1="408" y1="78" x2="408" y2="114" stroke="#5C7099" stroke-width="3" transform="rotate(0 408 96)"></line><line x1="408" y1="78" x2="408" y2="114" stroke="#5C7099" stroke-width="3" transform="rotate(60 408 96)"></line><line x1="408" y1="78" x2="408" y2="114" stroke="#5C7099" stroke-width="3" transform="rotate(120 408 96)"></line>
+<circle cx="408" cy="96" r="18" fill="none" stroke="#F37021" stroke-width="3"></circle>
+<circle cx="408" cy="96" r="6" fill="#8A9AB8"></circle>
+</g>
+</g>
+</g>
+</g>
+<g font-family="Manrope, sans-serif" font-size="15" font-weight="700" fill="#8A9AB8" letter-spacing="1.5">
+<text x="72" y="362">СТАРТ</text>
+<text x="304" y="34">ВЕРШИНА</text>
+<text x="934" y="362">ФИНИШ</text>
+</g>
+</svg>
+</div>
+
+<div style="padding: 40px 72px 0 72px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
+
+<div style="background: #172645; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<div style="font-family: Unbounded, sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0.1em; color: #FFB27A">S1</div>
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFB27A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20 L9 9 L13 15 L16 11 L21 20 Z"></path><path d="M8 11 L9 9 L10.5 11.5"></path></svg>
+</div>
+<div style="height: 4px; border-radius: 2px; background: #FFB27A"></div>
+<div style="font-size: 20px; line-height: 1.4; font-weight: 500">Новых вершин и&nbsp;сильных ног на&nbsp;любой дистанции</div>
+</div>
+
+<div style="background: #172645; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<div style="font-family: Unbounded, sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0.1em; color: #7FB2FF">S2</div>
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7FB2FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21 V3"></path><path d="M5 4 H19 L16.5 8 L19 12 H5"></path></svg>
+</div>
+<div style="height: 4px; border-radius: 2px; background: #7FB2FF"></div>
+<div style="font-size: 20px; line-height: 1.4; font-weight: 500">Только зелёного флага и&nbsp;идеальных пит-стопов</div>
+</div>
+
+<div style="background: #172645; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<div style="font-family: Unbounded, sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0.1em; color: #FFFFFF">S3</div>
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 L13.6 9.4 L20 11 L13.6 12.6 L12 19 L10.4 12.6 L4 11 L10.4 9.4 Z"></path><path d="M19 17 L19.6 19.4 L22 20 L19.6 20.6 L19 23"></path></svg>
+</div>
+<div style="height: 4px; border-radius: 2px; background: #FFFFFF"></div>
+<div style="font-size: 20px; line-height: 1.4; font-weight: 500">Промптов, которые с&nbsp;первого раза дают нужный результат</div>
+</div>
+
+</div>
+
+<div style="margin-top: auto; padding: 0 72px 64px 72px; display: flex; justify-content: flex-end">
+<div style="font-size: 22px; font-weight: 500; color: #B8C3D9">С уважением, Анастасия</div>
+</div>
+
+</div></div>
+<div class="face back"><div style="width: 1080px; height: 1350px; box-sizing: border-box; background: #F5F6FA; color: #14213D; font-family: Manrope, system-ui, sans-serif; display: flex; flex-direction: column; position: relative; overflow: hidden">
+
+<div style="height: 14px; display: flex">
+<div style="width: 220px; background: repeating-conic-gradient(#14213D 0 25%, #F5F6FA 0 50%) 0 0 / 14px 14px"></div>
+<div style="flex-grow: 1; background: #F37021"></div>
+</div>
+
+<div style="padding: 72px 88px 0 88px; display: flex; justify-content: space-between; align-items: center">
+<div style="font-family: Unbounded, sans-serif; font-size: 18px; font-weight: 600; letter-spacing: 0.18em; color: #4A5878">ПИТ-УОЛЛ · СООБЩЕНИЕ ПИЛОТУ</div>
+<div style="font-family: Unbounded, sans-serif; font-size: 18px; font-weight: 800; color: #F37021">P1</div>
+</div>
+
+<div style="padding: 80px 88px 0 88px; display: flex; flex-direction: column; gap: 40px">
+<h2 style="margin: 0; font-family: Unbounded, sans-serif; font-size: 64px; line-height: 1.05; font-weight: 800; letter-spacing: -0.02em">Дмитрий<br>Ришатович!</h2>
+<div style="width: 96px; height: 6px; border-radius: 3px; background: #F37021"></div>
+<div style="display: flex; flex-direction: column; gap: 28px; font-size: 27px; line-height: 1.55; font-weight: 500; max-width: 860px">
+<p style="margin: 0">Пусть этот год пройдёт как идеальная гонка: уверенный старт, чистые обгоны и&nbsp;стратегия, которая срабатывает с&nbsp;первого круга.</p>
+<p style="margin: 0">Пусть на&nbsp;трейлах будет сухая тропа, лёгкий шаг и&nbsp;виды, ради которых стоит набирать высоту. Достижения целей, исполнения желаний, пускай всегда будет время на&nbsp;важное: идеи, команду и&nbsp;новые вершины.</p>
+<p style="margin: 0; font-weight: 700">Здоровья, энергии, побед на&nbsp;трассе, счастья и&nbsp;успехов в&nbsp;любых делах!</p>
+</div>
+</div>
+
+<div style="margin-top: auto; padding: 0 88px 72px 88px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="height: 6px; border-radius: 3px; background: #F37021"></div>
+<div style="font-size: 15px; font-weight: 700; letter-spacing: 0.12em; color: #4A5878">S1 · ВЫСОТА</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="height: 6px; border-radius: 3px; background: #1F4E9E"></div>
+<div style="font-size: 15px; font-weight: 700; letter-spacing: 0.12em; color: #4A5878">S2 · СКОРОСТЬ</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="height: 6px; border-radius: 3px; background: #14213D"></div>
+<div style="font-size: 15px; font-weight: 700; letter-spacing: 0.12em; color: #4A5878">S3 · ИНТЕЛЛЕКТ</div>
+</div>
+</div>
+</div>
+
+</div></div>
+</div>
+<button class="hit" id="hit" aria-label="Перевернуть открытку"></button>
+</div>
+</div>
+<div class="hint" id="hint">Нажмите на открытку, чтобы прочитать поздравление</div>
+<script>
+(function(){
+var stage=document.getElementById('stage'),card=document.getElementById('card'),flip=document.getElementById('flip'),hint=document.getElementById('hint');
+function fit(){var w=window.innerWidth*0.94,h=(window.innerHeight-60)*0.96;var s=Math.min(w/1080,h/1350);card.style.transform='scale('+s+')';stage.style.width=(1080*s)+'px';stage.style.height=(1350*s)+'px';}
+window.addEventListener('resize',fit);fit();
+document.getElementById('hit').addEventListener('click',function(){var o=flip.classList.toggle('open');hint.textContent=o?'Нажмите ещё раз, чтобы вернуться к обложке':'Нажмите на открытку, чтобы прочитать поздравление';});
+})();
+</script>
+</body>
+</html>
